@@ -295,7 +295,8 @@ class StatGrabberPublication(StatGrabberBase):
     def get_all_story_overview(self):
 
         # TODO: need to figure out how pagination works after limit exceeded
-        endpoint = f"https://medium.com/{self.slug}/stats/stories?limit=50"
+        endpoint = f"https://medium.com/{self.slug}/stats/stories?limit=1000"
+        print(endpoint)
         response = self._fetch(endpoint)
         data = self._decode_json(response)
 
